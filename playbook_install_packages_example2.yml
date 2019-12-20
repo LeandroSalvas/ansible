@@ -1,14 +1,14 @@
 ---
-name: este é um arquivo de exemplo do ansible
-hosts: all
-tasks:
-  - name: Instalando pacote origem do repositorio
-    apt: name=htop update_cache=yes state=present
+- name: este é um arquivo de exemplo do ansible
+  hosts: all
+  tasks:
+    - name: Instalando pacote origem do repositorio
+      apt: name=htop update_cache=yes state=present
 
-  - name: Instalacao de multiplos pacotes
-    apt: name={{ item }} update_cache=yes state=present
-    with_items:
-      - silversearcher-ag
-      - ca-certificates
-      - curl
-      - vim
+    - name: Instalacao de multiplos pacotes
+      apt: name={{ item }} update_cache=yes state=present
+      with_items:
+        - silversearcher-ag
+        - ca-certificates
+        - curl
+        - vim

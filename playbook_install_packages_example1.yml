@@ -1,15 +1,15 @@
 ---
-name: este é um arquivo de exemplo do ansible
-hosts: all
-tasks:
-  - name: Baixar o pacote a partir de url
-    get_url:
-     url: "http://ftp.br.debian.org/debian/pool/main/h/htop/htop_2.0.2-1_amd64.deb"
-     dest: /tmp/htop.deb
+- name: este é um arquivo de exemplo do ansible
+  hosts: all
+  tasks:
+    - name: Baixar o pacote a partir de url
+      get_url:
+        url: "http://ftp.br.debian.org/debian/pool/main/h/htop/htop_2.0.2-1_amd64.deb"
+        dest: /tmp/htop.deb
 
-  - name: Instalar o repo do puppet
-    apt:
-     deb: /tmp/htop.deb
-     state: present
+    - name: Instalar o repo do puppet
+      apt:
+       deb: /tmp/htop.deb
+       state: present
 
     
