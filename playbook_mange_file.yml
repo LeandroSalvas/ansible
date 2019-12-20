@@ -1,0 +1,15 @@
+---
+- name: este é um arquivo de exemplo do ansible
+  hosts: all
+  tasks:
+    - name: copia de arquivo
+      copy: src=files/aqruivo_exemplo.txt dest=/tmp/arquivo_exemplo.txt
+  
+  tasks: 
+    - name: altera permissao e owner
+      path: /tmp/arquivo_exemplo.txt
+      owner: root
+      group: root
+      mode: '0777'
+
+    

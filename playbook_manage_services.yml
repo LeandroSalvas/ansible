@@ -1,0 +1,15 @@
+---
+- name: este é um arquivo de exemplo do ansible
+  hosts: all
+  tasks: 
+    - name: iniciando serviços
+      service: cron
+      state: started
+    
+    - name: parando serviços
+      service: cron
+      state: stopped
+    
+    - name: reiniciando serviços
+      service: cron
+      state: restarted
