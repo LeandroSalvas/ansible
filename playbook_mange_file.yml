@@ -6,6 +6,7 @@
       copy: src=files/aqruivo_exemplo.txt dest=/tmp/arquivo_exemplo.txt
   
     - name: altera permissao e owner
+      file:  
         path: /tmp/arquivo_exemplo.txt
         owner: root
         group: root
